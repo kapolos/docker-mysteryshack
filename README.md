@@ -22,11 +22,18 @@ If you don't want to build it, pull my image:
 docker volume create --name mysteryshack
 
 # Create a user
-docker run --rm -it -v mysteryshack:/data kapolos/mysteryshack bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user create admin'
+docker run --rm -it \
+  -v mysteryshack:/data kapolos/mysteryshack \
+  bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user create admin'
 
 # Set password
-docker run --rm -it -v mysteryshack:/data kapolos/mysteryshack bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user setpass admin'
+docker run --rm -it \
+  -v mysteryshack:/data kapolos/mysteryshack \
+  bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user setpass admin'
 
 # Serve
-docker run --rm -it -v mysteryshack:/data kapolos/mysteryshack bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack serve'
+docker run --rm -it \
+  -p 6767:6767
+  -v mysteryshack:/data kapolos/mysteryshack \
+  bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack serve'
 ```
