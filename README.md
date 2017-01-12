@@ -9,13 +9,13 @@ cd docker-mysteryshack
 docker build -t "yourtaghere" .
 ```
 
-# (or) Pull
+## (or) Pull
 
 If you don't want to build it, pull my image:
 
 `docker pull kapolos/mysteryshack`
 
-## Example usage
+# Example usage
 
 ```
 # Create a named volume
