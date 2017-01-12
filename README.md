@@ -32,7 +32,7 @@ docker run --rm -it \
   bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user setpass admin'
 
 # Serve
-docker run --rm -it \
+docker run -d --restart=unless-stopped \
   -p 6767:6767
   -v mysteryshack:/data kapolos/mysteryshack \
   bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack serve'
