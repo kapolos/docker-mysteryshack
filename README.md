@@ -13,7 +13,7 @@ docker build -t "yourtaghere" .
 
 If you don't want to build it, pull my image:
 
-`docker pull kapolos/mysterysh`
+`docker pull kapolos/mysteryshack`
 
 ## Example usage
 
