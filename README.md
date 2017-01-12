@@ -17,7 +17,7 @@ If you don't want to build it, pull my image:
 
 # Example usage
 
-```
+```bash
 # Create a named volume
 docker volume create --name mysteryshack
 
