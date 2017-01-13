@@ -26,11 +26,6 @@ docker run --rm -it \
   -v mysteryshack:/data kapolos/mysteryshack \
   bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user create admin'
 
-# Set password
-docker run --rm -it \
-  -v mysteryshack:/data kapolos/mysteryshack \
-  bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user setpass admin'
-
 # Serve
 docker run -d --restart=unless-stopped \
   -p 6767:6767
