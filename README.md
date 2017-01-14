@@ -17,12 +17,12 @@ docker volume create --name mysteryshack
 
 # Create a user
 docker run --rm -it \
-  -v mysteryshack:/data kapolos/mysteryshack \
+  -v mysteryshack:/data youraccount/yourimage \
   bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack user create admin'
 
 # Serve
 docker run -d --restart=unless-stopped \
   -p 6767:6767
-  -v mysteryshack:/data kapolos/mysteryshack \
+  -v mysteryshack:/data youraccount/yourimage \
   bash -c 'cd /opt/mysteryshack/target/release/ ; ./mysteryshack serve'
 ```
